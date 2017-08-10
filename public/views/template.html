@@ -1,0 +1,21 @@
+<nav class="navbar navbar-inverse navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbarExample">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">コードゴルフ</a>
+    </div>
+    <div class="navbar-collapse collapse" id="navbarExample">
+      <ul class="nav navbar-nav">
+        <li {{if eq .Active "rank"}}class="active"{{end}}>
+          <a href="rank">順位</a>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</nav>

@@ -1,0 +1,42 @@
+<html>
+  <head>
+    {{template "header.html" .}}
+    {{template "template.html" .}}
+  </head>
+  <body>
+    <div class="list-group">
+      {{range $key, $val := .Hash}}
+        <h2><label class="label label-primary">{{$key}}問目</label></h2>
+        <br />
+        {{range $k, $v := $val}}
+          <h4><label class="label label-default">
+          {{if eq $k 1}}
+            Golang
+          {{else if eq $k 2}}
+            PHP
+          {{else if eq $k 3}}
+            Node.js
+          {{end}}
+          </label></h4>
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>名前</th>
+                <th>打数</th>
+              </tr>
+            </thead>
+            <tbody>
+              {{range $k_, $v_ := $v}}
+                <tr>
+                  <td>{{$v_.Name}}</td>
+                  <td>{{$v_.Count}}</td>
+                </tr>
+              {{end}}
+            </tbody>
+          </table>
+        {{end}}
+      {{end}}
+    </div>
+
+  </body>
+</html>

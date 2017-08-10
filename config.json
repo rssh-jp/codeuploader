@@ -1,0 +1,5 @@
+{
+    "crondir" : "/opt/cron-manager/cron/",
+    "publicdir" : "/home/gnavi/favorite/personal/test/go/codeupload/",
+    "ex" : "今回はわざとエラーが出るようにしている。"
+}
